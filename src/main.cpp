@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     void* drcBuffer = memalign(0x100, drcBufferSize);
 
     if (!tvBuffer || !drcBuffer) {
-        WHBLogPrint("Out of memory!");
+        WHBLogPrint("Out of memory !");
 
         if (tvBuffer) free(tvBuffer);
         if (drcBuffer) free(drcBuffer);
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
         OSScreenShutdown();
         WHBProcShutdown();
 
-        WHBLogPrint("Quitting.");
+        WHBLogPrint("Quitting..");
         WHBLogCafeDeinit();
         WHBLogUdpDeinit();
 
@@ -52,11 +52,11 @@ int main(int argc, char** argv) {
         OSScreenClearBufferEx(SCREEN_TV, 0x00000000);
         OSScreenClearBufferEx(SCREEN_DRC, 0x00000000);
 
-        OSScreenPutFontEx(SCREEN_TV, 0, 0, "TEXT");
-        OSScreenPutFontEx(SCREEN_TV, 0, 1, "TEXT2");
+        OSScreenPutFontEx(SCREEN_TV, 0, 0, "Hiiii");
+        OSScreenPutFontEx(SCREEN_TV, 0, 1, "Skibidi Toilet");
 
-        OSScreenPutFontEx(SCREEN_DRC, 0, 0, "TEXT1");
-        OSScreenPutFontEx(SCREEN_DRC, 0, 1, "TEXT2");
+        OSScreenPutFontEx(SCREEN_DRC, 0, 0, "Nooooooo");
+        OSScreenPutFontEx(SCREEN_DRC, 0, 1, "PNL meilleur rappeur");
 
         DCFlushRange(tvBuffer, tvBufferSize);
         DCFlushRange(drcBuffer, drcBufferSize);
