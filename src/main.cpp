@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
         OSScreenShutdown();
         WHBProcShutdown();
 
-        WHBLogPrint("Quitting..");
+        WHBLogPrint("Exiting..");
         WHBLogCafeDeinit();
         WHBLogUdpDeinit();
 
@@ -52,11 +52,11 @@ int main(int argc, char** argv) {
         OSScreenClearBufferEx(SCREEN_TV, 0x00000000);
         OSScreenClearBufferEx(SCREEN_DRC, 0x00000000);
 
-        OSScreenPutFontEx(SCREEN_TV, 0, 0, "Hiiii");
-        OSScreenPutFontEx(SCREEN_TV, 0, 1, "Skibidi Toilet");
+        OSScreenPutFontEx(SCREEN_TV, 0, 0, "Hello TV !");
+        OSScreenPutFontEx(SCREEN_TV, 0, 1, "TV TEXT");
 
-        OSScreenPutFontEx(SCREEN_DRC, 0, 0, "Nooooooo");
-        OSScreenPutFontEx(SCREEN_DRC, 0, 1, "PNL meilleur rappeur");
+        OSScreenPutFontEx(SCREEN_DRC, 0, 0, "Hello Gamepad");
+        OSScreenPutFontEx(SCREEN_DRC, 0, 1, "DRC TEXT");
 
         DCFlushRange(tvBuffer, tvBufferSize);
         DCFlushRange(drcBuffer, drcBufferSize);
